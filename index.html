@@ -64,7 +64,7 @@
             color: var(--secondary-color);
         }
 
-        ul {
+        ul, ol {
             padding-left: 20px;
         }
 
@@ -72,19 +72,24 @@
             margin-bottom: 10px;
         }
 
-        /* Заглушки для фотографий */
-        .img-placeholder {
+        /* Стиль для красивого отображения фотографий */
+        .project-image {
             width: 100%;
-            height: 250px;
-            background-color: #e2e8f0;
-            border: 2px dashed #cbd5e1;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            display: block;
+            border: 1px solid #ddd;
+        }
+
+        /* Контейнер для фото, идущих подряд */
+        .image-gallery {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-style: italic;
+            flex-direction: column;
+            gap: 20px;
             margin: 20px 0;
-            border-radius: 6px;
         }
 
         .tips-block {
@@ -130,9 +135,7 @@
                 <li><strong>Декор:</strong> Акриловые краски (серая, черная) и кисти. Можно использовать синий целлофан для имитации реки.</li>
             </ul>
 
-            <div class="img-placeholder">
-                [Здесь будет Рис. 9: Фотография материалов и инструментов]
-            </div>
+            <img src="images/image9.jpg" alt="Материалы и инструменты" class="project-image">
 
             <h3>Проектирование:</h3>
             <p>Определите масштаб. При длине одной палочки около 11 см (примерно 5 палочек в длину), общая длина макета составит около 50 см. Обратите внимание на ключевые элементы моста:</p>
@@ -142,8 +145,9 @@
                 <li><strong>Пролетное строение:</strong> Полотно для поездов (нижний ярус) и автодорога (верхний ярус).</li>
             </ul>
 
-            <div class="img-placeholder">
-                [Здесь будет Рис. 10 и 11: Чертежи и фото оригинала]
+            <div class="image-gallery">
+                <img src="images/image10.jpg" alt="Чертежи Амурского моста" class="project-image">
+                <img src="images/image11.jpg" alt="Конструкция верхнего яруса" class="project-image">
             </div>
         </div>
 
@@ -153,21 +157,18 @@
             
             <h3>1. Изготовление «досок»</h3>
             <p>Одной палочки для фермы не хватит. Склейте между собой 2-3 палочки пласть к пласти, чтобы получить прочные и длинные балки. Положите их под груз до полного высыхания.</p>
-            <div class="img-placeholder">
-                [Здесь будет Рис. 12: Процесс склеивания палочек]
-            </div>
+            
+            <img src="images/image12.jpg" alt="Процесс склеивания палочек" class="project-image">
 
             <h3>2. Сборка ферм</h3>
             <p>Нарисуйте шаблон в натуральную величину. Наклеивайте палочки прямо на этот шаблон, повторяя рисунок решетки. <strong>Важно:</strong> сначала собирается внешний контур, затем заполняются внутренние перемычки. Сделайте 5 идентичных ферм.</p>
-            <div class="img-placeholder">
-                [Здесь будет Рис. 13: Сборка ферм по шаблону]
-            </div>
+            
+            <img src="images/image13.jpg" alt="Сборка ферм по шаблону" class="project-image">
 
             <h3>3. Изготовление опор (быков)</h3>
             <p>Склейте палочки в виде массивных прямоугольников («колод») или усеченных пирамид. Для экономии материала их можно сделать полыми внутри.</p>
-            <div class="img-placeholder">
-                [Здесь будет Рис. 14: Готовые опоры из палочек]
-            </div>
+            
+            <img src="images/image14.jpg" alt="Изготовление опор" class="project-image">
         </div>
 
         <div class="card">
@@ -185,9 +186,7 @@
                 <li><strong>Детализация:</strong> Добавьте диагональные перемычки и перила по краям пролетов.</li>
             </ol>
             
-            <div class="img-placeholder">
-                [Здесь будет Рис. 15: Процесс установки ферм на опоры]
-            </div>
+            <img src="images/image15.jpg" alt="Установка ферм на опоры" class="project-image">
         </div>
 
         <div class="card">
@@ -200,9 +199,7 @@
                 <li><strong>Финальные штрихи:</strong> Установите на нижний ярус миниатюрную модельку поезда для масштаба и реалистичности.</li>
             </ul>
 
-            <div class="img-placeholder">
-                [Здесь будет Рис. 16: Окрашенный макет с поездом]
-            </div>
+            <img src="images/image16.jpg" alt="Окрашенный макет с поездом" class="project-image">
         </div>
 
         <div class="tips-block">
@@ -216,11 +213,14 @@
             </ul>
         </div>
 
-        <div class="img-placeholder" style="background-color: #d1fae5; border-color: #10b981; color: #047857; height: 400px;">
-            [Здесь будет Рис. 17: ИТОГОВОЕ ФОТО ГОТОВОГО МАКЕТА]
-        </div>
+        <h2 style="text-align: center; margin-top: 40px; color: var(--primary-color);">Итог: Готовый макет моста</h2>
+        <img src="images/image17.jpg" alt="Итоговое фото готового макета" class="project-image" style="border: 3px solid var(--secondary-color);">
 
     </div>
+
+    <footer>
+        <p>Проект выполнила: ученица 10 "А" класса Пуховая Виктория Алексеевна<br>г. Хабаровск, 2026 г.</p>
+    </footer>
 
 </body>
 </html>
